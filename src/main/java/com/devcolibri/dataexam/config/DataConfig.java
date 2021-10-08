@@ -16,6 +16,20 @@ import javax.annotation.Resource;
 import javax.sql.DataSource;
 import java.util.Properties;
 
+/**
+ * @Configuration – говорит, что данный класс является Spring конфигурацией;
+ *
+ * @EnableTransactionManagement – включает TransactionManager для управления транзакциями БД;
+ *
+ * @ComponentScan(“com.devcolibri.dataexam”) – указываем Spring где нужно искать Entity, DAO, Service и т.п.;
+ *
+ * @PropertySource(“classpath:app.properties”) – подключаем файл свойств созданный выше;
+ *
+ * @EnableJpaRepositories(“com.devcolibri.dataexam.repository”) –
+ * включаем возможность использования JPARepository
+ * и говорим, где их искать.
+ * (будем рассматривать позже детальней).
+ */
 @Configuration
 @EnableTransactionManagement
 @ComponentScan("com.devcolibri.dataexam")
